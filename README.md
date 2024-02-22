@@ -1,2 +1,2 @@
 # wings.master-thesis
-Master-Thesis
+Repository für alle erstellten Quelltexte im Rahmen der Master-Thesis.
