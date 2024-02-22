@@ -1,2 +1,2 @@
-# wings.master-thesis
-Repository für alle erstellten Quelltexte im Rahmen der Master-Thesis.
+# Master-Thesis - Digitaler Anhang
+Repository für den Digitalen Anhang der Master-Thesis.
