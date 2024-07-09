@@ -46,15 +46,15 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Lombok for reducing boilerplate code 
+		<!-- Lombok for reducing boilerplate code -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
-		</dependency>-->
+		</dependency>
 
 		<!-- Jackson Dataformat XML -->
-<!--		<dependency>
+		<!--		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>-->
