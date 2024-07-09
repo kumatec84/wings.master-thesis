@@ -13,8 +13,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import de.kubbillum.masterthesis.rxcheckwrapper.generated.EDispensierung;
 import jakarta.xml.bind.annotation.XmlRootElement;
 //import de.kubbillum.masterthesis.rxcheckwrapper.generated.EDispensierung;
-//import lombok.Data;
-//import lombok.NoArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @RestController
 @RequestMapping("/api/rxcheck")
@@ -45,8 +45,8 @@ public class RxCheckWrapperController {
 	}
 
 	// Beispiel-Datenklassen
-	//@Data
-	//@NoArgsConstructor
+	@Data
+	@NoArgsConstructor
 	@XmlRootElement(name = "ValidationResult")
 	public static class ValidationResult {
 		private boolean isValid;
