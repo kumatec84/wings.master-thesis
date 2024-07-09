@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:altova="http://www.altova.com/xml-schema-extensions" xmlns:ns="http://www.w3.org/2000/09/xmldsig#" elementFormDefault="qualified" attributeFormDefault="unqualified" vc:minVersion="1.1">
+	<xs:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd"/>
+	<xs:element name="eDispensierung">
+		<xs:annotation>
+			<xs:documentation>diese Version = 200 ist nur für GEMATIK eRezepte.
+Pilotprojekte nutzen weiterhin Version=100</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EVerordnung">
+					<xs:annotation>
+						<xs:documentation>Vom Arzt signierte eVerordnung als application/pkcs7-mime kodiert:
+https://fhir.kbv.de/StructureDefinition/KBV_PR_ERP_Bundle|1.0.0
+</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:base64Binary">
+							<xs:maxLength value="1000000"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Quittung">
+					<xs:annotation>
+						<xs:documentation>EAbgabe Base64 kodiert
+https://gematik.de/fhir/StructureDefinition/ErxReceipt
+
+dieses Feld darf leer bleiben (ggf. schon vor Quittung eine Prüfung = Übermittlung ans RZ z.B: bei synchoner Prüfung an der Kasse)
+
+Nachweis durch den Rezeptspeicher, dass das Rezept von der Apotheke beliefert wurde. (Kann leer sein, wenn das Rezept zur Vorprüfung an das RZ geschickt wird)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:base64Binary">
+							<xs:maxLength value="100000"/>
+							<xs:minLength value="0"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EAbgabe">
+					<xs:annotation>
+						<xs:documentation>EAbgabe als application/pkcs7-mime kodiert:
+http://fhir.abda.de/eRezeptAbgabedaten/StructureDefinition/DAV-PR-ERP-AbgabedatenBundle
+
+Die Signatur der EAbgabe darf mit einem Dummyzertifikat erstellt werden, wenn die Quittung leer ist. (Hintergrund: bei einer schnellen synchronen Prüfung soll dies auch ohne Konnektor leicht erstellbar sein) | z.B. schnelle / synchrone 302 Prüfung macht Sinn, weil diese derzeit nicht als eRezept abgerechnet werden dürfen</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:base64Binary">
+							<xs:maxLength value="1000000"/>
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="RezeptId" use="required">
+				<xs:annotation>
+					<xs:documentation>alias PrescriptionID: eindeutige ID des Rezepts</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+						<xs:maxLength value="22"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="Version" use="required">
+				<xs:annotation>
+					<xs:documentation>eDispensierung (3Stellen) 200</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="3"/>
+						<xs:maxLength value="3"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

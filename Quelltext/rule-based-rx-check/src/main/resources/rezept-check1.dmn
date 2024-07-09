@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_EEB8CAA6-F0FC-46E5-8C33-FCC747894E65" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_FADE5E11-131E-49AD-BCE8-93FCD5837870" name="rezept-check1" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_EEB8CAA6-F0FC-46E5-8C33-FCC747894E65">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_0C28D5D8-9F56-4D87-BD30-EB9A61B4F487" name="Insert a name" isCollection="false">
+    <dmn:typeRef>Any</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_5C8725BF-31B5-45CD-AAE2-72C9F4E00394" name="tRezept" isCollection="true">
+    <dmn:itemComponent id="_AAD482D4-23E2-4D0D-95AD-277C434ECAE8" name="verordnungId" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_B5543185-5FE2-4D66-9D22-BB261D40C570" name="valid" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9DA384D4-D789-40E1-BF3B-85337AA55991" name="rezeptTyp" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9C44BABF-0F4D-4624-8465-A3BC7C861C9F" name="retaxierungVermeiden" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9905BDF3-D479-4A8E-B8B5-F03AD35C5238" name="patientenName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0327AAB7-0E07-4692-93B8-4BAB3BC9D722" name="patientenId" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5465E454-CCED-4020-BAFB-A2F0B48FBCE7" name="patientenGeburtsdatum" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4CD22AF0-A09A-4811-B229-F87116F2F84B" name="patientenAdresse" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6ACDFE9E-AF27-4064-B8EE-8799754D3AAB" name="packungsgroesse" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_F6F4AA6B-35E0-47CD-A931-85B81F5E69F4" name="medikamentPzn" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_D9E122B9-B46E-409B-83E8-055B95D6B8A5" name="medikamentName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_221E7EBC-914E-45EB-8495-7AE23F6A9B7B" name="krankenkasseName" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_4D272764-6B70-443D-929A-425551765ADC" name="krankenkasseId" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_914C35A1-7705-44C8-A9CB-91F39DDFCBCE" name="hinweise" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5D75A1FA-1FA5-424B-A2FC-83125EBD1380" name="dosierung" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_36764192-0365-4D92-9A16-BBD3CF929A19" name="darreichungsform" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_735B2197-0C7F-4982-BDD9-6D66645257F9" name="autIdem" isCollection="false">
+      <dmn:typeRef>boolean</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_9F8DA921-E18E-4662-AEA5-F018BE56A46C" name="anwendungsdauer" isCollection="false">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
+  <dmn:inputData id="_65297067-DB30-4C83-864B-212C0CA836AC" name="Rezept">
+    <dmn:extensionElements/>
+    <dmn:variable id="_30AE6D3D-7457-4380-96BC-98E9DEF30E02" name="Rezept" typeRef="tRezept"/>
+  </dmn:inputData>
+  <dmn:decision id="_A2458066-29D7-44F2-A60A-1AA85913DB3F" name="abrechenbarPZN">
+    <dmn:extensionElements/>
+    <dmn:variable id="_7E5FCE95-8200-4D57-BA44-43489602F954" name="abrechenbarPZN" typeRef="boolean"/>
+    <dmn:informationRequirement id="_5372773C-DBF4-47A7-9193-2D13B19455D1">
+      <dmn:requiredInput href="#_65297067-DB30-4C83-864B-212C0CA836AC"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_A1AA0C8D-D5B7-4CB1-A075-70C4E0140EC3" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_EE91A86F-F054-49AB-882C-190A3110ADD0">
+        <dmn:inputExpression id="_D6AD2B3C-8376-4C34-8C54-C788D29B6151" typeRef="string">
+          <dmn:text>Rezept.anwendungsdauer</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_7361CFFC-A758-4482-8DE4-318F24805D04">
+        <dmn:inputExpression id="_62320E28-0D49-4FC4-8D1E-5C299240CAE3" typeRef="boolean">
+          <dmn:text>Rezept.autIdem</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_1EAE6704-C522-4871-B7FA-66A92B94B08E">
+        <dmn:inputExpression id="_08A51E13-A255-4E50-98C2-BC99B07CF678" typeRef="string">
+          <dmn:text>Rezept.darreichungsform</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_47FA068A-2BC3-494E-8B97-72AB8E8EC8FC">
+        <dmn:inputExpression id="_51E83E03-3C8F-43E5-B0A5-7916B0773A87" typeRef="string">
+          <dmn:text>Rezept.dosierung</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_2617021F-913A-4734-B7FD-166A78C9A006">
+        <dmn:inputExpression id="_F0B45017-8C6D-42B5-BE67-EA0B8E3F7CB0" typeRef="string">
+          <dmn:text>Rezept.hinweise</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_4552A51B-0A7E-432A-806F-024B5B095A4B">
+        <dmn:inputExpression id="_193966CE-0170-40F6-BF0F-E6E14855CA12" typeRef="string">
+          <dmn:text>Rezept.krankenkasseId</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_5EBBF49E-3D99-4FE9-B778-C9D67299C797">
+        <dmn:inputExpression id="_674C3438-86A2-4DEA-8418-5DA5F5259F39" typeRef="string">
+          <dmn:text>Rezept.krankenkasseName</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_7C309ABF-B51D-4F9A-BA07-382C88AE93A3">
+        <dmn:inputExpression id="_93887806-E3B3-4FF8-BDE2-2B48A145B979" typeRef="string">
+          <dmn:text>Rezept.medikamentName</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_B3A33782-788E-4525-9275-EF78918D77B2">
+        <dmn:inputExpression id="_01DFD72B-D961-4D66-B737-83F0A28E1A03" typeRef="string">
+          <dmn:text>Rezept.medikamentPzn</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_0CE2F00D-5ED3-42F7-B949-7DF068F19553">
+        <dmn:inputExpression id="_4D622AEF-D1BB-448F-B073-086941034DE9" typeRef="number">
+          <dmn:text>Rezept.packungsgroesse</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_EED65A60-565E-4969-A371-F0D298AF9EE0">
+        <dmn:inputExpression id="_67F2A724-77F4-4084-B79C-C85131AB1985" typeRef="string">
+          <dmn:text>Rezept.patientenAdresse</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_A3BDCE1F-5DF9-4367-BD42-5D5D193EEA34">
+        <dmn:inputExpression id="_B564B6EB-62B3-4B6D-8BF0-8332D4D6351E" typeRef="string">
+          <dmn:text>Rezept.patientenGeburtsdatum</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_D2CCDB14-C7A7-4683-83EF-3D8B564C1123">
+        <dmn:inputExpression id="_D06EF28A-D39A-4689-BCED-33640D7FD3D2" typeRef="string">
+          <dmn:text>Rezept.patientenId</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_587126E2-FDFA-4AFB-9F06-EED9318C14E3">
+        <dmn:inputExpression id="_71A1A7DD-E040-4BAD-BA1B-EDCAE9242808" typeRef="string">
+          <dmn:text>Rezept.patientenName</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_86C3FFAC-CB85-4792-995D-4D30D0D37F14">
+        <dmn:inputExpression id="_A8F9F004-9B4C-4193-BF78-A592BA2E0C35" typeRef="boolean">
+          <dmn:text>Rezept.retaxierungVermeiden</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_AF28DAA5-57F8-4370-89BE-88BA12616F36">
+        <dmn:inputExpression id="_5ABDAE4D-F214-4662-8AE6-AFE7C23FAAB0" typeRef="string">
+          <dmn:text>Rezept.rezeptTyp</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_F6544B98-6983-4BAF-A39D-DDDA823C202E">
+        <dmn:inputExpression id="_A8BFADF7-38F4-4676-8020-C50E3BC61875" typeRef="boolean">
+          <dmn:text>Rezept.valid</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_7E58CCB6-D55B-4EE5-AB22-308A391E5A60">
+        <dmn:inputExpression id="_DB09216B-A67D-4E89-BC02-71979D735C4E" typeRef="string">
+          <dmn:text>Rezept.verordnungId</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_4A722FFB-42B8-4B21-ADAC-A72C1D9E84E8"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_2753DDFF-C365-4C79-B6C3-D00B028776A1">
+        <dmn:inputEntry id="_B4C62067-2080-4FD8-8798-7F085B653BAA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_9B94863F-FFBB-4CEF-9280-33D6BF2C2909">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_A8B032C8-2349-4F56-B66A-63766DE8E962">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B2EBAAA9-4342-4466-86F8-75D786A62EE2">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3CB6378A-920D-4322-AACF-E8B3DCD75D10">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_950BE0F4-B8DF-4559-A801-E56E76982FE6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_729691E7-CAAF-402B-A751-4F103BA4286B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_2A8C9166-5035-42D1-AAFF-9A2822C3720F">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_F55B0086-F7BB-47C7-8A14-741BF03F2E6A">
+          <dmn:text>="123"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_75DA8FBA-E179-4A09-97FB-B74F84EC46AF">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_08991714-AC13-4DAB-9A98-4106D22C5C5A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_64617DE9-EB7B-4755-A6D9-2AA7D3DF3FBA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_15FA4491-E02F-4603-A04B-CAB0E18E51D0">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57763B2B-65B6-49D3-ACB8-2A0EC9D0530B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8AE94905-7815-4690-8665-7E869723AC2B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_C4B16371-FC07-41B8-8E8A-AD3C3A9935DE">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_693DE4D2-B21C-4BB1-8BCC-F1691BC79D70">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_6F971BBC-CF7D-4295-AEC0-EE0737E8C4C1">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_D8ECCB74-48C0-4F45-8E88-D87DFE91B27C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_1CA294F8-7220-46B6-A4CE-A419C7AC12C2">
+        <dmn:inputEntry id="_2DCA49F4-40BC-4294-9863-92A40DFBCE68">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_91CD7BB3-61A8-4687-9A2F-5097EAA64A59">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8969075F-536C-4669-93B8-C6BBDF621455">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CEE4489E-44CB-4DB9-A6FF-1AEC9EE1391E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_74DA03AB-72FC-40A7-8FD5-060D0B625C69">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_FE87D3B1-2312-4DB3-85AA-32EEBAA6155E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_4D499A7D-826C-4D04-9E83-DA6EFF52D875">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3378CBAB-698A-460D-BA9D-48B13D1A94DA">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_57198BA9-2DA5-4764-B947-3B2FCB4ECCEA">
+          <dmn:text>not("123")</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_80F23F20-F505-43E1-962F-E6F50CD09B24">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B3F30967-D474-4AC1-AE54-872FDC37559D">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_74646DF1-7C6D-4161-AF0B-B32A3C396744">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_21F7ED0F-FB07-4CF7-8185-E613FE0CF867">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_376412EB-D1FA-4E79-A824-13960F8693E6">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CBB8C813-B48A-4130-8E2E-75C40B8F5BFB">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BCDA82B4-21E7-4DDA-B6D4-7045704EECBC">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_98967111-BF92-4C18-9C38-13B21BE06A96">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_846010CA-8BDD-46C0-822D-ED83554AD08B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_CC9149A8-DABA-4B83-B2AF-8F53554806D6">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text/>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="_3929266C-E56E-4F45-93CB-353E38A6B8ED" name="DRG">
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_A1AA0C8D-D5B7-4CB1-A075-70C4E0140EC3">
+            <kie:width>50</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-drg-_65297067-DB30-4C83-864B-212C0CA836AC" dmnElementRef="_65297067-DB30-4C83-864B-212C0CA836AC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="199" y="360" width="165" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_A2458066-29D7-44F2-A60A-1AA85913DB3F" dmnElementRef="_A2458066-29D7-44F2-A60A-1AA85913DB3F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="520" y="360" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-2-_65297067-DB30-4C83-864B-212C0CA836AC" dmnElementRef="_65297067-DB30-4C83-864B-212C0CA836AC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="998" y="565" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-drg-_5372773C-DBF4-47A7-9193-2D13B19455D1-AUTO-TARGET" dmnElementRef="_5372773C-DBF4-47A7-9193-2D13B19455D1">
+        <di:waypoint x="281.5" y="385"/>
+        <di:waypoint x="602.5" y="360"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
