@@ -1,6 +1,6 @@
 # Digitaler Anhang zur Master-Thesis
 
-## Titel der Masterarbeit
+## Thema
 **Regelbasierte Prüfung von E-Rezepten zur Vermeidung von Retaxation bei Leistungserbringern der gesetzlichen Krankenversicherung**
 
 ## Autor
