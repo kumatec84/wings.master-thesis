@@ -17,7 +17,7 @@ Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 - **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](./Kubbillum_Martin__Master-Thesis.pdf)
 
 ### Anlage 8.2: Installationsanleitung und Docker-Container-Definition für IBM Business Automation Manager Open Editions
-Eine Multi-Container-Definition (`docker-compose.yaml`) für die lokal ausführbare Version von IBM Business Automation Manager Open Editions (BAMOE) sowie eine zugehörige Installationsanleitung (separate `README.md`) werden bereitgestellt.
+Eine Multi-Container-Definition (`docker-compose.yaml`) für die lokale Ausführung von IBM Business Automation Manager Open Editions (BAMOE) Version 8 sowie eine zugehörige Installationsanleitung (separate `README.md`) werden bereitgestellt.
 - **Dateipfad**: [/Quelltext/ibamoe-docker-compose/](./Quelltext/ibamoe-docker-compose/)
 - **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des GitHub-Repositories
 
