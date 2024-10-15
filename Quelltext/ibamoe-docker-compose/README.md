@@ -23,7 +23,7 @@ Anhand der Multi-Container-Definition `docker-compose.yaml` werden mit *Docker C
 docker compose up
 ```
 
-- **Die BAMOE Test-Umgebung sollte jetzt laufen und die folgende Konsolenausgabe zu sehen sein:**
+- **Die BAMOE Test-Umgebung sollte jetzt laufen und die folgenden Konsolenausgaben zu sehen sein:**
 
 ```
   IBM Business Automation Manager Open Edition 8.0.3
@@ -35,7 +35,7 @@ docker compose up
 ```
 
 - **Schritt 4 - Business Central aufrufen und anmelden:**  
-Die Web-Oberfläche Business Central kann jetzt lokal aufgerufen werden.  
+Die Web-Oberfläche von Business Central kann jetzt lokal aufgerufen werden.  
 **Zugangslink**: [http://localhost:8080/business-central/kie-wb.jsp](http://localhost:8080/business-central/kie-wb.jsp)  
 Eine Anmeldung ist mit den folgenden Zugangsdaten möglich:  
 **Benutzername**: bamAdmin  
