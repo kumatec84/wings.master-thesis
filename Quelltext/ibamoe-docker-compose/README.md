@@ -17,7 +17,7 @@ cd C:\dev\ibamoe-docker-compose
 ```
 
 - **Schritt 3 - Aufbauen der Container-Umgebung:**  
-Anhand der Multi-Container-Definition `docker-compose.yaml` werden mit *Docker Compose* werden Images heruntergeladen, anschließend die Container gebaut und gestartet.  
+Anhand der Multi-Container-Definition `docker-compose.yaml` werden mit *Docker Compose* die Images heruntergeladen und anschließend die Container gebaut und gestartet.  
 *Hinweis: Die Images haben eine Größe von mehreren Gigabyte, wodurch der Download mehrere Minuten in Anspruch nehmen kann.*
   
 ```
