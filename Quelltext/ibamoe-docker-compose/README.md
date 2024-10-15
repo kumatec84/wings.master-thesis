@@ -34,8 +34,9 @@ docker compose up
   GitHub CORS Proxy image to be able to do local GitHub communication with GitHub through CORS
 ```
 
-- **Schritt 4 - Business Central aufrufen:**  
+- **Schritt 4 - Business Central aufrufen und anmelden:**  
 Die Web-Oberfläche Business Central kann jetzt lokal aufgerufen werden.  
-**Zugangslink**: [http://localhost:8080/business-central/kie-wb.jsp](http://localhost:8080/business-central/kie-wb.jsp )    
+**Zugangslink**: [http://localhost:8080/business-central/kie-wb.jsp](http://localhost:8080/business-central/kie-wb.jsp)  
+Eine Anmeldung ist mit den folgenden Zugangsdaten möglich:  
 **Benutzername**: bamAdmin  
 **Passwort**: ibmpam1!  
