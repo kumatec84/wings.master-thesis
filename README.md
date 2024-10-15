@@ -11,13 +11,13 @@
 
 ---
 
-Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt:
+Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt. Die `README.md` mit der Auflistung der Anlagen befindet sich im Wurzelverzeichnis.
 
 ### Anlage 8.1: Digitale Ausfertigung der Master-Thesis
 - **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](./Kubbillum_Martin__Master-Thesis.pdf)
 
 ### Anlage 8.2: Docker-Container-Definition für IBM BAMOE
-Es wird eine Container-Definition (`docker-compose.yaml`) für die lokal ausführbare Version von BAMOE sowie eine zugehörige Installationsanleitung (separate `README.md`) mitgeliefert.
+Es werden eine Multi-Container-Definition (`docker-compose.yaml`) für die lokal ausführbare Version von BAMOE sowie eine zugehörige Installationsanleitung (separate `README.md`) mitgeliefert.
 - **Dateipfad**: [/Quelltext/ibamoe-docker-compose/](./Quelltext/ibamoe-docker-compose/)
 - **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des Git-Repositories
 
