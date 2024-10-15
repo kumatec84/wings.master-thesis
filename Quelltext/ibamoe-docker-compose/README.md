@@ -4,7 +4,7 @@ Diese Anleitung geht davon aus, dass das Repository auf dem UBS-Stick mit dem Di
 ## Voraussetzungen
 Eine lokale Installation von Docker wird vorausgesetzt.
 
-### Lokale Installation von IBM Business Automation Manager Open Editions (BAMOE)
+## Lokale Installation von IBM Business Automation Manager Open Editions (BAMOE)
 - **Schritt 1 - Container-Definition bereitstellen:**  
 Kopieren Sie den Ordner `bamoe-docker-compose` auf ein lokales Laufwerk, z.B. nach `C:\dev\ibamoe-docker-compose`.  
 *Hinweis: Wurde das Repository von GitHub geclont, sollte das Verzeichnis bereits auf einem lokalen Laufwerk liegen.* 
