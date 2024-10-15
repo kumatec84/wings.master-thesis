@@ -11,7 +11,7 @@
 
 ---
 
-Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt. Die `README.md` mit der Auflistung der Anlagen befindet sich im Wurzelverzeichnis.
+Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 
 ### Anlage 8.1: Digitale Ausfertigung der Master-Thesis
 - **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](./Kubbillum_Martin__Master-Thesis.pdf)
