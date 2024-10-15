@@ -5,14 +5,14 @@ Eine lokale Installation von Docker wird vorausgesetzt.
 
 ## Lokale Installation von IBM Business Automation Manager Open Editions (BAMOE)
 - **Schritt 1 von 4 - Container-Definition bereitstellen:**  
-Kopieren Sie den Ordner `bamoe-docker-compose` auf ein lokales Laufwerk, z.B. nach `C:\dev\ibamoe-docker-compose`.  
+Kopieren Sie den Ordner `IBM-BAMOE-Docker-Compose` auf ein lokales Laufwerk, z.B. nach `C:\Dev\IBM-BAMOE-Docker-Compose`.  
 *Hinweis: Wurde das Repository nicht über den digitalen Anhang der Master-Thesis (USB-Stick) bezogen, sondern von GitHub geklont, sollte das Verzeichnis bereits auf einem lokalen Laufwerk liegen.* 
 
 
 - **Schritt 2 von 4 - In das Verzeichnis mit der Container-Definition wechseln:**
 
 ```
-cd C:\dev\ibamoe-docker-compose
+cd C:\Dev\IBM-BAMOE-Docker-Compose
 ```
 
 - **Schritt 3 von 4 - Aufbauen der Container-Umgebung:**  
