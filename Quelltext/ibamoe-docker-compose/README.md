@@ -1,5 +1,4 @@
 # Installation und Ausführung des Prototyps für die Master-Thesis
-Diese Anleitung geht davon aus, dass das Repository auf dem UBS-Stick mit dem Digitalen Anhang der Master-Thesis zur Verfügung gestellt wird.
 
 ## Voraussetzungen
 Eine lokale Installation von Docker wird vorausgesetzt.
