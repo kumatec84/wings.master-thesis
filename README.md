@@ -19,7 +19,7 @@ Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 ### Anlage 8.2: Installationsanleitung und Docker-Container-Definition für IBM BAMOE
 Es werden eine Multi-Container-Definition (`docker-compose.yaml`) für die lokal ausführbare Version von IBM Business Automation Manager Open Editions (BAMOE) sowie eine zugehörige Installationsanleitung (separate `README.md`) mitgeliefert.
 - **Dateipfad**: [/Quelltext/ibamoe-docker-compose/](./Quelltext/ibamoe-docker-compose/)
-- **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des Git-Repositories
+- **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des GitHub-Repositories
 
 ### Anlage 8.3: DMN-Modelle der Rezeptprüfung
 Die exportierten Entscheidungsmodelle können importiert und wiederverwendet werden.
