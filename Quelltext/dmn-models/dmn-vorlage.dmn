@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_F6B1CFD7-546B-45D2-8881-E0A9BB49F86F" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BFDF6672-BF99-41AF-B027-A2DBC519B6A8" name="DMN_Vorlage" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_F6B1CFD7-546B-45D2-8881-E0A9BB49F86F">
+  <dmn:extensionElements/>
+  <dmn:inputData id="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" name="Abgabe">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B9596E6F-FAE4-47C6-B7C1-64098C7AA72B" name="Abgabe"/>
+  </dmn:inputData>
+  <dmn:decision id="_9CAE8C09-6465-41CF-91F2-001CF458A245" name="Beispiel_Rezeptpruefung">
+    <dmn:extensionElements/>
+    <dmn:variable id="_0ECAACAF-DC92-4E03-9250-95B1CA2642AB" name="Beispiel_Rezeptpruefung"/>
+    <dmn:informationRequirement id="_A39C82A9-A949-44C0-98F6-67C4252CC44D">
+      <dmn:requiredInput href="#_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B">
+      <dmn:requiredInput href="#_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5"/>
+    </dmn:informationRequirement>
+  </dmn:decision>
+  <dmn:inputData id="_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" name="Verordnung">
+    <dmn:extensionElements/>
+    <dmn:variable id="_97C1E0F7-F7B9-4191-B7FB-49E4045DD3D5" name="Verordnung"/>
+  </dmn:inputData>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension/>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" dmnElementRef="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="785" y="263" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" dmnElementRef="_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="466" y="263" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_9CAE8C09-6465-41CF-91F2-001CF458A245" dmnElementRef="_9CAE8C09-6465-41CF-91F2-001CF458A245" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="575" y="106" width="208" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_A39C82A9-A949-44C0-98F6-67C4252CC44D-AUTO-TARGET" dmnElementRef="_A39C82A9-A949-44C0-98F6-67C4252CC44D">
+        <di:waypoint x="516" y="288"/>
+        <di:waypoint x="679" y="156"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B-AUTO-TARGET" dmnElementRef="_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B">
+        <di:waypoint x="835" y="288"/>
+        <di:waypoint x="679" y="156"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>
