@@ -27,6 +27,7 @@ Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Doc
 ### Anlage 8.3: DMN-Modelle der Rezeptprüfung
 Die exportierten Entscheidungsmodelle aus Business Central können importiert und wiederverwendet werden. Die jeweils zugehörigen mit Business Central erzeugten Dokumentationen im PDF-Format werden ebenfalls mitgeliefert.
 - **Dateipfade**: 
+	- [/Quelltext/DMN-Modelle/](./Quelltext/DMN-Modelle/)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf)
 
