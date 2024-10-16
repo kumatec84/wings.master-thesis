@@ -18,12 +18,15 @@ Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 
 ### Anlage 8.2: Installationsanleitung und Docker-Container-Definition für IBM Business Automation Manager Open Editions
 Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)) für die lokale Ausführung von IBM Business Automation Manager Open Editions (BAMOE) Version 8 sowie eine zugehörige Installationsanleitung (separate [README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)) werden bereitgestellt.
-- **Dateipfad**: [/Quelltext/IBM-BAMOE-Docker-Compose/](./Quelltext/IBM-BAMOE-Docker-Compose/)
+- **Dateipfade**: 
+	- [/Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)  
+	- [/Quelltext/IBM-BAMOE-Docker-Compose/README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)
 - **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des GitHub-Repositories
 
 ### Anlage 8.3: DMN-Modelle der Rezeptprüfung
 Die exportierten Entscheidungsmodelle können importiert und wiederverwendet werden.
-- **Dateipfad**: [/Quelltext/DMN-Modelle/](./Quelltext/DMN-Modelle/)
+- **Dateipfade**: 
+	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn)
 
 ### Anlage 8.4: Demovideos
 Um die Funktionsweise des Prototyps zu demonstrieren, wurden Demovideos mit Kommentaren aufgezeichnet.
