@@ -25,7 +25,7 @@ Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Doc
 - **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des GitHub-Repositories
 
 ### Anlage 8.3: DMN-Modelle der Rezeptprüfung
-Die exportierten Entscheidungsmodelle aus Business Central können importiert und wiederverwendet werden. Die jeweils zugehörigen von Business Central erzeugten Dokumentationen im PDF-Format werden ebenfalls mitgeliefert.
+Die exportierten Entscheidungsmodelle aus Business Central können importiert und wiederverwendet werden. Die jeweils zugehörigen mit Business Central erzeugten Dokumentationen im PDF-Format werden ebenfalls mitgeliefert.
 - **Dateipfade**: 
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf)
