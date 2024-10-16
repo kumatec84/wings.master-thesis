@@ -22,7 +22,6 @@ Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Doc
 	- [/Quelltext/IBM-BAMOE-Docker-Compose/](./Quelltext/IBM-BAMOE-Docker-Compose/)   
 	- [/Quelltext/IBM-BAMOE-Docker-Compose/README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)  
 	- [/Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)
-
 - **Quelle**: In Anlehnung an Wuthenow, 13. Juli 2023, Fork des GitHub-Repositories
 
 ### Anlage 8.3: DMN-Modelle der Rezeptprüfung
