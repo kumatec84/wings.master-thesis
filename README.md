@@ -44,5 +44,5 @@ Web-Seiten und unveröffentlichte Dokumente, die als Literaturquelle verwendet w
 - **Quelle**: Bundesverband Deutscher Apothekenrechenzentren e. V., 2022
 
 ### Anlage 8.7: DAP Arbeitsbuch - III.A.4 Substitutionsausschussliste 
-- **Dateipfad**: [/Literaturquellen/Brüggen, Dunkel et al 2024 - DAP-Arbeitsbuch - Substitutionsausschussliste.pdf](./Literaturquellen/Brueggen, Dunkel et al 2024 - DAP-Arbeitsbuch - Substitutionsausschussliste.pdf)
+- **Dateipfad**: [/Literaturquellen/Brüggen, Dunkel et al 2024 - DAP-Arbeitsbuch - Substitutionsausschussliste.pdf](./Literaturquellen/Brueggen,%20Dunkel%20et%20al%202024%20-%20DAP-Arbeitsbuch%20-%20Substitutionsausschussliste.pdf)
 - **Quelle**: Brüggen et al., 2024, S. III.4.3–III.4.7
