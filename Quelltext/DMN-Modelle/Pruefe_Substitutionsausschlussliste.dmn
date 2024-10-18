@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_F6B1CFD7-546B-45D2-8881-E0A9BB49F86F" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BFDF6672-BF99-41AF-B027-A2DBC519B6A8" name="DMN_Vorlage" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_F6B1CFD7-546B-45D2-8881-E0A9BB49F86F">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/Pruefe_Substitutionsausschlussliste" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_BFDF6672-BF99-41AF-B027-A2DBC519B6A8" name="Pruefe_Substitutionsausschlussliste" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/Pruefe_Substitutionsausschlussliste">
   <dmn:extensionElements/>
   <dmn:itemDefinition id="_309D6440-A303-4219-9D91-52FFAAD5AF6D" name="Abgabe" isCollection="false">
     <dmn:itemComponent id="_397F180B-02EB-4390-A7ED-106CFE5C9DC8" name="Abgabedatum" isCollection="false">
@@ -19,14 +19,14 @@
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_704A6403-C52A-40DC-9D3A-AD1EF70CBAC6" name="Verordnung" isCollection="false">
-    <dmn:itemComponent id="_5797FD90-6FB0-441C-B3FC-D4138C90A489" name="ArztNr" isCollection="false">
-      <dmn:typeRef>number</dmn:typeRef>
-    </dmn:itemComponent>
     <dmn:itemComponent id="_9031256C-77D8-4714-9743-749C9EF8309E" name="Ausstellungsdatum" isCollection="false">
       <dmn:typeRef>date</dmn:typeRef>
     </dmn:itemComponent>
     <dmn:itemComponent id="_006F10F9-1212-4A65-8D9C-316DB168FB0C" name="Berufsbezeichnung" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_0138E667-E6F9-495B-93FC-67AD6802F875" name="Darreichungsform" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
     </dmn:itemComponent>
     <dmn:itemComponent id="_2BF0CCB1-ACA7-409E-94A3-CBEB6C44401B" name="PharmazentralNr" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
@@ -34,108 +34,46 @@
     <dmn:itemComponent id="_135D6483-002A-4232-A841-CFF423147244" name="Wirkstoff" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_41F94099-2CD9-4BA5-AF16-3C71D9EC4F20" name="Wirkstoffverordnung" isCollection="false">
-      <dmn:typeRef>boolean</dmn:typeRef>
-    </dmn:itemComponent>
+    <dmn:itemComponent id="_41F94099-2CD9-4BA5-AF16-3C71D9EC4F20" name="Wirkstoffverordnung" isCollection="false"/>
   </dmn:itemDefinition>
-  <dmn:inputData id="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" name="Abgabe">
+  <dmn:decision id="_3CA62A3B-D739-47C7-B6BC-C111FB35920F" name="Ist_Wirkstoffverordnung">
     <dmn:extensionElements/>
-    <dmn:variable id="_B9596E6F-FAE4-47C6-B7C1-64098C7AA72B" name="Abgabe" typeRef="Abgabe"/>
-  </dmn:inputData>
-  <dmn:inputData id="_FA831A76-A0B7-4911-A923-47205CA7C945" name="Substitutionsausschlussliste">
-    <dmn:extensionElements/>
-    <dmn:variable id="_784740C4-D423-4B33-A169-1AE4698AB290" name="Substitutionsausschlussliste"/>
-  </dmn:inputData>
-  <dmn:knowledgeSource id="_7E2A4F5A-8130-46D5-8E22-531B7B5B20C4" name="Gemeinsame Bundesausschuss (G-BA)" locationURI="">
-    <dmn:extensionElements/>
-    <dmn:type></dmn:type>
-  </dmn:knowledgeSource>
-  <dmn:knowledgeSource id="_1C627FBD-2258-4954-8A58-13E7372F4697" name="Teil B der Anlage VII zur Arzneimittel-Richtlinie" locationURI="">
-    <dmn:extensionElements/>
-    <dmn:type></dmn:type>
-  </dmn:knowledgeSource>
-  <dmn:decision id="_9CAE8C09-6465-41CF-91F2-001CF458A245" name="Pruefe_Substitutionsausschlussliste">
-    <dmn:extensionElements/>
-    <dmn:variable id="_0ECAACAF-DC92-4E03-9250-95B1CA2642AB" name="Pruefe_Substitutionsausschlussliste" typeRef="boolean"/>
-    <dmn:informationRequirement id="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_A39C82A9-A949-44C0-98F6-67C4252CC44D">
+    <dmn:variable id="_818C6786-6DA1-440F-B8F5-E9C2187ACB52" name="Ist_Wirkstoffverordnung" typeRef="boolean"/>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_EA232E18-70FF-41AC-A8D8-C6F1E57EEF24">
       <dmn:requiredInput href="#_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC"/>
     </dmn:informationRequirement>
-    <dmn:informationRequirement id="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B">
-      <dmn:requiredInput href="#_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5"/>
-    </dmn:informationRequirement>
-    <dmn:informationRequirement id="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8CB89CD1-BA32-465C-8232-240E280D77D7">
-      <dmn:requiredInput href="#_FA831A76-A0B7-4911-A923-47205CA7C945"/>
-    </dmn:informationRequirement>
-    <dmn:authorityRequirement id="_B2F114AB-D8A3-4314-B0F4-6F0ECCF7DC10">
-      <dmn:requiredAuthority href="#_1C627FBD-2258-4954-8A58-13E7372F4697"/>
-    </dmn:authorityRequirement>
-    <dmn:authorityRequirement id="_BC3E9153-9569-45D1-8008-9E995C6FFD79">
-      <dmn:requiredAuthority href="#_1E597C51-185B-499C-98D8-E550D147F257"/>
-    </dmn:authorityRequirement>
-    <dmn:authorityRequirement id="_DB2BA8A9-126A-4CDF-B809-3BD2B918352E">
-      <dmn:requiredAuthority href="#_7E2A4F5A-8130-46D5-8E22-531B7B5B20C4"/>
-    </dmn:authorityRequirement>
-    <dmn:authorityRequirement id="_347BCAA4-E4A7-481F-8CA9-7114CF0936FB">
-      <dmn:requiredAuthority href="#_A9A9CA4B-DBCD-4CEE-AF9D-9B6FF1AE252B"/>
-    </dmn:authorityRequirement>
-    <dmn:decisionTable id="_17427302-4510-4886-9FD2-8A5150DD2BCD" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-      <dmn:input id="_E1CC8C80-106D-43FD-99B1-851B8F70289C">
-        <dmn:inputExpression id="_176CBDA7-7A08-4D85-BBD1-64B732327754" typeRef="string">
-          <dmn:text>Abgabe.PharmazentralNr</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_1A11729D-97EA-4B4B-B304-6F92033FF6F0">
-        <dmn:inputExpression id="_54667157-9AAD-4CC1-808C-7464242703C9" typeRef="string">
-          <dmn:text>Verordnung.Berufsbezeichnung</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_90EE40B0-E55B-4AA1-96F4-124B80443F2E">
-        <dmn:inputExpression id="_6E02997D-EAB3-4222-87D3-D0A354CE71D9" typeRef="string">
-          <dmn:text>Verordnung.PharmazentralNr</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_530A0B73-5F27-4D91-9B08-4AE18D845BC9">
-        <dmn:inputExpression id="_449F1125-9EAE-443B-B7A6-7AC89C4DFF19" typeRef="string">
-          <dmn:text>Verordnung.VersichertenNr</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_4057641C-8392-4F38-A350-B73232C5F819">
-        <dmn:inputExpression id="_983B822B-D836-4B38-9155-3125C1AE7055" typeRef="string">
-          <dmn:text>Verordnung.Wirkstoffname</dmn:text>
-        </dmn:inputExpression>
-      </dmn:input>
-      <dmn:input id="_471EA7DF-5618-4103-80FB-E417417EA450">
-        <dmn:inputExpression id="_9F90DCD5-BFAC-48A3-BD5F-7C98D0A5198E" typeRef="boolean">
+    <dmn:decisionTable id="_326B42F3-8922-43EA-9118-F86DA85905CA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_04B8F096-4BC1-4774-928A-76844C2C7E3A">
+        <dmn:inputExpression id="_7F161125-806C-4CE0-A618-65D7C60DE8A3" typeRef="boolean">
           <dmn:text>Verordnung.Wirkstoffverordnung</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_35EEB1B9-4F10-48AA-BF9B-FFC3AE22FDF0" name="Fehler" typeRef="boolean"/>
-      <dmn:output id="_F2B27390-5136-4E2D-83D0-AFF0E83ED765" name="Hinweis" typeRef="string"/>
+      <dmn:output id="_2AAA60C6-0EF3-4373-9F53-BBCC60000432" name="Status" typeRef="boolean"/>
+      <dmn:output id="_F0469BDF-9FEC-4F62-AC7F-62D80A10CA3E" name="Hinweis" typeRef="string"/>
       <dmn:annotation name="annotation-1"/>
-      <dmn:rule id="_D0ED6DDE-B525-49D3-9659-F337A9937905">
-        <dmn:inputEntry id="_D45C1EDD-2EB9-4250-9708-24C3FC8EFA15">
-          <dmn:text>-</dmn:text>
+      <dmn:rule id="_A3CBC71B-9AD9-4575-AB6E-8609631D82FD">
+        <dmn:inputEntry id="_96F85CC1-BD62-4D13-A798-6F44EAACEE58">
+          <dmn:text>=true</dmn:text>
         </dmn:inputEntry>
-        <dmn:inputEntry id="_152CC7FF-83BC-44FF-8328-09D559BC5738">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_CF44AEA0-7CD0-4A04-BCCD-13E351AEF14A">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_B47B88BC-6B55-4B25-8EC0-F6E6F23F9CB8">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_03FA5126-CFED-45EE-A833-748FC320DB31">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:inputEntry id="_5C857B30-4012-4E4E-BF9A-BD4AD3C6D959">
-          <dmn:text>-</dmn:text>
-        </dmn:inputEntry>
-        <dmn:outputEntry id="_5EC89F0E-2AE3-46B7-AC6C-800B181EB4F4">
+        <dmn:outputEntry id="_3FF6A73A-F2C9-4CC2-8395-DD871FEBEE8A">
           <dmn:text>true</dmn:text>
         </dmn:outputEntry>
-        <dmn:outputEntry id="_D3F1B6EE-A839-4C98-A14E-7559E7ED8562">
-          <dmn:text>Platzhalter Hinweis</dmn:text>
+        <dmn:outputEntry id="_31B5E2B8-B853-4867-B24C-AAA21C4885EC">
+          <dmn:text>"Es ist eine Wirkstoffverordnung"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_F8A13B85-0033-4D54-8B19-A6DB09B56A8A">
+        <dmn:inputEntry id="_9FF9943A-AC06-404E-920A-0711A772BE21">
+          <dmn:text>=false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_08DBCE36-8D4A-4327-9CB7-0F6AE09BFFBE">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D54F6202-1546-428A-9E4F-357F280A6274">
+          <dmn:text>"Es ist KEINE Wirkstoffverordnung"</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text></dmn:text>
@@ -143,79 +81,277 @@
       </dmn:rule>
     </dmn:decisionTable>
   </dmn:decision>
-  <dmn:knowledgeSource id="_1E597C51-185B-499C-98D8-E550D147F257" name="§ 129 SGB V" locationURI="">
+  <dmn:inputData id="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" name="Abgabe">
     <dmn:extensionElements/>
-    <dmn:type></dmn:type>
-  </dmn:knowledgeSource>
+    <dmn:variable id="_B9596E6F-FAE4-47C6-B7C1-64098C7AA72B" name="Abgabe" typeRef="Abgabe"/>
+  </dmn:inputData>
+  <dmn:decision id="_AA9DFC41-A983-4891-AEDD-372521704A8A" name="Pruefe_Substitutionsausschlussliste">
+    <dmn:extensionElements/>
+    <dmn:variable id="_52B34CAD-0398-42C7-9647-4C662A49DD7A" name="Pruefe_Substitutionsausschlussliste"/>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_A996821D-A2D0-4597-AEA3-53C0B2B515C8">
+      <dmn:requiredDecision href="#_3B3D14B9-DBE4-47C2-8102-09A2D445E3EF"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_0C1137BB-79F8-4778-8849-AB686AA74B38">
+      <dmn:requiredDecision href="#_3CA62A3B-D739-47C7-B6BC-C111FB35920F"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_5E7A981F-AE3B-4C64-A8CD-4BDE9EC6C295">
+      <dmn:requiredDecision href="#_AF67721C-C2CD-40BE-9167-1A37DE1A51C9"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_2BA8A9B2-FD89-4D0E-AE04-A2DEC02C30C5" hitPolicy="RULE ORDER" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_0C138AFE-33BD-437C-AEAF-B96B7AC0B488">
+        <dmn:inputExpression id="_FD966253-5429-4E49-B076-2FAB939BD083" typeRef="boolean">
+          <dmn:text>Ist_auf_Substitutionsausschlussliste</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_09BCC098-A9BC-410C-906B-B50F485F1FCC">
+        <dmn:inputExpression id="_EA5CB0D5-04D4-46AB-BE20-75126A2DEE19" typeRef="boolean">
+          <dmn:text>Ist_Wirkstoffverordnung</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_6AFC7AA1-738A-4D90-8219-FA2AAA2DAE98">
+        <dmn:inputExpression id="_83A739A9-20B3-4BAB-8CE7-DF8026E31995" typeRef="boolean">
+          <dmn:text>Abgabe_identisch_Verordnung</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_A4958936-1084-4023-8332-C871A91BEA42" name="Status" typeRef="boolean"/>
+      <dmn:output id="_0EEE66D0-DF9A-41A7-93ED-0C7D720CFF0E" name="Hinweis" typeRef="string"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_EEEE956F-DC54-4AE0-9B94-CCD212353229">
+        <dmn:inputEntry id="_8B4F2AA6-3C51-463D-810B-09ECC0B9288E">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CF64C331-FD53-4192-B556-150B17BA492B">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_3E0301BA-CA5C-4880-A1C8-B2F79075BE9E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4AD6ED65-B06A-450C-8EC2-5534AB4F517C">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_1DACB062-2F5B-4C5D-BD9E-6CB0549B2D8E">
+          <dmn:text>"Wirkstoff ist nicht auf der Substitutionsaussschlussliste"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_99EDCA30-CBB4-48A7-8075-2664DC324EF0">
+        <dmn:inputEntry id="_25FD2190-90C8-4FFC-9E8B-14B2E50B1967">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_CA8A373B-3698-4B93-A7F9-404F650B43DB">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8DEF0FC9-B093-42D0-8F81-D3852C1991D8">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_ED54D0F0-E9CA-4A53-9C4A-F1BD0DDE530D">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_62BF68E0-C4FF-4BA0-B694-1C1E738F283B">
+          <dmn:text>"Wirkstoff ist auf der Substitutionsaussschlussliste.
+Unklare Verordnung => Arzt"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_9154C1BA-B33A-47C2-A9FF-24630CA88CF2">
+        <dmn:inputEntry id="_1D754DF9-2B26-47B7-A830-E05A149DD04C">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_E4FCF406-86E4-4B84-955A-70D913205CD1">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_BE6A4426-4221-4472-9779-BDDFC0E2F819">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_E86E4804-854F-4D22-AC87-D2E7FCFAB42C">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_D6D09F63-685B-4416-BEEA-D2098CD2945D">
+          <dmn:text>"Wirkstoff ist auf der Substitutionsaussschlussliste.
+Austausch (PZN1 gegen PZN2) unzulässig!"
+</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_7C628C98-E363-4F97-8CB8-50D81F2F0F8B">
+        <dmn:inputEntry id="_6C5AF6F7-C908-4BD2-AA47-FF370673653D">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8F018D67-56B9-432F-A0B5-B1B2A49F5D7C">
+          <dmn:text>false</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_0818B738-654F-4291-B497-4756EE19123D">
+          <dmn:text>true</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_4BA6E54A-8BF0-45D8-87DF-84A7616DF4AA">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_EB0ED347-7D3D-44E7-8F7D-8B20AB24469B">
+          <dmn:text>"Wirkstoff ist auf der Substitutionsaussschlussliste.
+Es liegt aber keine unzulässige Substitution vor."</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_05BC14E7-33A5-44D5-9162-3612A8FFE521">
+        <dmn:inputEntry id="_6AE0F629-26E4-487D-B690-305369D9BCF9">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_B8A357C9-84F7-4453-99BA-C5B8A1D2657E">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_8BF13F7F-E99E-4CE0-95F6-EEBF0349C52A">
+          <dmn:text>-</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_04932C5A-CD17-4E59-83B1-17E1CA29D2A0">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_4E85138E-A53B-4F7A-BFA2-B82650027716">
+          <dmn:text>"Bitte beachten: Prüfung der Substitutionsaussschlussliste konnte nicht durchgeführt werden. Bitte prüfen Sie selbst."</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_3B3D14B9-DBE4-47C2-8102-09A2D445E3EF" name="Ist_auf_Substitutionsausschlussliste">
+    <dmn:extensionElements/>
+    <dmn:variable id="_9AD3E140-3841-43D9-8C61-AA689EB404B4" name="Ist_auf_Substitutionsausschlussliste" typeRef="boolean"/>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_B4BE69CA-6EF3-47BE-9720-7A39E5E0EDA4">
+      <dmn:requiredInput href="#_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_A7B35942-1DC2-464A-B094-3EBFD38A4504" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_0126124C-A34C-4D2B-8DAC-F3DC449C1989">
+        <dmn:inputExpression id="_2AE3B3F5-0BE5-4D7B-82FB-CE2AF3F8F5AC" typeRef="string">
+          <dmn:text>Verordnung.Wirkstoff</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:input id="_5D3B851F-BCE2-48C6-ACDD-818877278053">
+        <dmn:inputExpression id="_B859502D-4C38-41FD-87C3-4049609458FA" typeRef="string">
+          <dmn:text>Verordnung.Darreichungsform</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_A2F289AE-26AF-4AE2-82E3-29C547814DCC"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_5E143704-AB30-4E5B-8C79-A4C0603A456F">
+        <dmn:inputEntry id="_B06D6A1A-68DC-49CB-82BA-BC37D8A68426">
+          <dmn:text>= "Digoxin"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:inputEntry id="_41708289-2639-44AD-BA12-A661F931BD0E">
+          <dmn:text>= "Tabletten"</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_AE4DCE3C-AE4A-4AE0-83A9-5F7CC9461300">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
+  <dmn:decision id="_AF67721C-C2CD-40BE-9167-1A37DE1A51C9" name="Abgabe_identisch_Verordnung">
+    <dmn:extensionElements/>
+    <dmn:variable id="_113EE1F3-6E96-45D5-A447-86A5588D948F" name="Abgabe_identisch_Verordnung" typeRef="boolean"/>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_BEFEC8E8-B50E-4713-B18D-EF8ACB2ADCAE">
+      <dmn:requiredInput href="#_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_DF8F84CE-292F-4AEA-A5C6-1BBBAD4920EB">
+      <dmn:requiredInput href="#_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC"/>
+    </dmn:informationRequirement>
+    <dmn:decisionTable id="_40CEC658-0925-4D05-A579-761BE6B53BC8" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_EFE8A330-CCA8-4F2C-A0C4-20F5265DD824">
+        <dmn:inputExpression id="_7EF1AB74-0669-4BD3-B172-A5167609E0BD" typeRef="number">
+          <dmn:text>Abgabe.PharmazentralNr</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_5A404B0B-3AD7-4C8F-BAE4-E103C311D0FA" name="Status" typeRef="boolean"/>
+      <dmn:output id="_E590959D-692F-46EE-B46C-C1A2711FC59D" name="Hinweis" typeRef="string"/>
+      <dmn:annotation name="annotation-1"/>
+      <dmn:rule id="_DC5F0EDA-B59E-476B-80C1-E6B1A66D47FA">
+        <dmn:inputEntry id="_A25EFDEC-91EE-452E-B4E5-1B567772BACD">
+          <dmn:text>= Verordnung.PharmazentralNr</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_9FE4578D-32E5-4D34-B07C-32E573DCCD02">
+          <dmn:text>true</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9DDEB232-6362-49F4-805C-0AC8CC6FA9A3">
+          <dmn:text>"Es liegt KEINE Substitution vor."</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+      <dmn:rule id="_CFD135C6-D865-446F-8E58-78862F761E18">
+        <dmn:inputEntry id="_5740D385-79DE-406A-A668-CBAE922A4A2C">
+          <dmn:text>!= Verordnung.PharmazentralNr</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_375A08AF-DDCE-478A-A804-ABD38A9D4858">
+          <dmn:text>false</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_A0F2C17F-B91E-4268-9732-6F22AB8CDBA5">
+          <dmn:text>"Es liegt eine Substitution vor!"</dmn:text>
+        </dmn:outputEntry>
+        <dmn:annotationEntry>
+          <dmn:text></dmn:text>
+        </dmn:annotationEntry>
+      </dmn:rule>
+    </dmn:decisionTable>
+  </dmn:decision>
   <dmn:inputData id="_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" name="Verordnung">
     <dmn:extensionElements/>
     <dmn:variable id="_97C1E0F7-F7B9-4191-B7FB-49E4045DD3D5" name="Verordnung" typeRef="Verordnung"/>
   </dmn:inputData>
-  <dmn:knowledgeSource id="_A9A9CA4B-DBCD-4CEE-AF9D-9B6FF1AE252B" name="Rahmenvertrag über die Arzneimittelversorgung nach § 129 Absatz 2 SGB V" locationURI="">
-    <dmn:extensionElements/>
-    <dmn:type></dmn:type>
-  </dmn:knowledgeSource>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_17427302-4510-4886-9FD2-8A5150DD2BCD">
+          <kie:ComponentWidths dmnElementRef="_40CEC658-0925-4D05-A579-761BE6B53BC8">
             <kie:width>50.0</kie:width>
-            <kie:width>129.0</kie:width>
-            <kie:width>206.0</kie:width>
-            <kie:width>211.0</kie:width>
-            <kie:width>191.0</kie:width>
-            <kie:width>193.0</kie:width>
-            <kie:width>226.0</kie:width>
+            <kie:width>322.0</kie:width>
             <kie:width>100.0</kie:width>
+            <kie:width>309.0</kie:width>
             <kie:width>100.0</kie:width>
-            <kie:width>104.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A7B35942-1DC2-464A-B094-3EBFD38A4504">
+            <kie:width>50.0</kie:width>
+            <kie:width>195.0</kie:width>
+            <kie:width>227.0</kie:width>
+            <kie:width>244.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_326B42F3-8922-43EA-9118-F86DA85905CA">
+            <kie:width>50.0</kie:width>
+            <kie:width>218.0</kie:width>
+            <kie:width>174.0</kie:width>
+            <kie:width>498.0</kie:width>
+            <kie:width>100.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2BA8A9B2-FD89-4D0E-AE04-A2DEC02C30C5">
+            <kie:width>50.0</kie:width>
+            <kie:width>260.0</kie:width>
+            <kie:width>203.0</kie:width>
+            <kie:width>230.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>447.0</kie:width>
+            <kie:width>100.0</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
-      <dmndi:DMNShape id="dmnshape-_1C627FBD-2258-4954-8A58-13E7372F4697" dmnElementRef="_1C627FBD-2258-4954-8A58-13E7372F4697" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_AF67721C-C2CD-40BE-9167-1A37DE1A51C9" dmnElementRef="_AF67721C-C2CD-40BE-9167-1A37DE1A51C9" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="538.2234228971962" y="73.11677631578948" width="155.37500000000006" height="71.875"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_1E597C51-185B-499C-98D8-E550D147F257" dmnElementRef="_1E597C51-185B-499C-98D8-E550D147F257" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="728.7304322429907" y="2.3421052631578902" width="154.37500000000006" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_9CAE8C09-6465-41CF-91F2-001CF458A245" dmnElementRef="_9CAE8C09-6465-41CF-91F2-001CF458A245" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="262" y="7.410256410256409" width="238" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" dmnElementRef="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="166.29906542056074" y="108.41025641025641" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_7E2A4F5A-8130-46D5-8E22-531B7B5B20C4" dmnElementRef="_7E2A4F5A-8130-46D5-8E22-531B7B5B20C4" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="538.2514602803737" y="1.8141447368421026" width="151.37500000000006" height="56.875"/>
+        <dc:Bounds x="628" y="168" width="202" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" dmnElementRef="_7FDCD288-6A22-41C9-9AF1-B429CD9B56DC" isCollapsed="false">
@@ -224,54 +360,72 @@
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="49.06829618979151" y="108.41025641025641" width="100" height="50"/>
+        <dc:Bounds x="426.29906542056074" y="261.4102564102564" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_FA831A76-A0B7-4911-A923-47205CA7C945" dmnElementRef="_FA831A76-A0B7-4911-A923-47205CA7C945" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_3B3D14B9-DBE4-47C2-8102-09A2D445E3EF" dmnElementRef="_3B3D14B9-DBE4-47C2-8102-09A2D445E3EF" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="280" y="108" width="200" height="51"/>
+        <dc:Bounds x="75" y="168" width="244" height="53"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_A9A9CA4B-DBCD-4CEE-AF9D-9B6FF1AE252B" dmnElementRef="_A9A9CA4B-DBCD-4CEE-AF9D-9B6FF1AE252B" isCollapsed="false">
+      <dmndi:DMNShape id="dmnshape-_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" dmnElementRef="_CFC4F829-81A1-4D3B-8C75-6BF369FDB7F5" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
           <dmndi:StrokeColor red="0" green="0" blue="0"/>
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
-        <dc:Bounds x="729" y="60" width="157.37500000000006" height="97.875"/>
+        <dc:Bounds x="678" y="261.3421052631579" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
-      <dmndi:DMNEdge id="dmnedge-_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_A39C82A9-A949-44C0-98F6-67C4252CC44D-AUTO-TARGET" dmnElementRef="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_A39C82A9-A949-44C0-98F6-67C4252CC44D">
-        <di:waypoint x="99.06829618979151" y="108.41025641025641"/>
-        <di:waypoint x="381" y="57.41025641025641"/>
+      <dmndi:DMNShape id="dmnshape-_3CA62A3B-D739-47C7-B6BC-C111FB35920F" dmnElementRef="_3CA62A3B-D739-47C7-B6BC-C111FB35920F" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="384" y="168" width="186" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_AA9DFC41-A983-4891-AEDD-372521704A8A" dmnElementRef="_AA9DFC41-A983-4891-AEDD-372521704A8A" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="354" y="53" width="245" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_BEFEC8E8-B50E-4713-B18D-EF8ACB2ADCAE-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_BEFEC8E8-B50E-4713-B18D-EF8ACB2ADCAE">
+        <di:waypoint x="728" y="286.3421052631579"/>
+        <di:waypoint x="729" y="168"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8A44A4D8-BCE8-4838-A3F1-64A0C5C7856B">
-        <di:waypoint x="216.29906542056074" y="108.41025641025641"/>
-        <di:waypoint x="381" y="57.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_DF8F84CE-292F-4AEA-A5C6-1BBBAD4920EB-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_DF8F84CE-292F-4AEA-A5C6-1BBBAD4920EB">
+        <di:waypoint x="476.29906542056074" y="286.4102564102564"/>
+        <di:waypoint x="729" y="218"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8CB89CD1-BA32-465C-8232-240E280D77D7-AUTO-TARGET" dmnElementRef="_C1429EB1-FAE4-4776-8047-906CA2A5E6F7#_8CB89CD1-BA32-465C-8232-240E280D77D7">
-        <di:waypoint x="380" y="133.5"/>
-        <di:waypoint x="381" y="57.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_B4BE69CA-6EF3-47BE-9720-7A39E5E0EDA4-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_B4BE69CA-6EF3-47BE-9720-7A39E5E0EDA4">
+        <di:waypoint x="476.29906542056074" y="286.4102564102564"/>
+        <di:waypoint x="197" y="221"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_B2F114AB-D8A3-4314-B0F4-6F0ECCF7DC10-AUTO-TARGET" dmnElementRef="_B2F114AB-D8A3-4314-B0F4-6F0ECCF7DC10">
-        <di:waypoint x="615.9109228971962" y="109.05427631578948"/>
-        <di:waypoint x="500" y="32.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_EA232E18-70FF-41AC-A8D8-C6F1E57EEF24-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_EA232E18-70FF-41AC-A8D8-C6F1E57EEF24">
+        <di:waypoint x="476.29906542056074" y="286.4102564102564"/>
+        <di:waypoint x="477" y="218"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_BC3E9153-9569-45D1-8008-9E995C6FFD79-AUTO-TARGET" dmnElementRef="_BC3E9153-9569-45D1-8008-9E995C6FFD79">
-        <di:waypoint x="805.9179322429907" y="27.34210526315789"/>
-        <di:waypoint x="381" y="57.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_A996821D-A2D0-4597-AEA3-53C0B2B515C8-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_A996821D-A2D0-4597-AEA3-53C0B2B515C8">
+        <di:waypoint x="197" y="194.5"/>
+        <di:waypoint x="476.5" y="53"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_DB2BA8A9-126A-4CDF-B809-3BD2B918352E-AUTO-TARGET" dmnElementRef="_DB2BA8A9-126A-4CDF-B809-3BD2B918352E">
-        <di:waypoint x="613.9389602803737" y="30.251644736842103"/>
-        <di:waypoint x="500" y="32.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_0C1137BB-79F8-4778-8849-AB686AA74B38-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_0C1137BB-79F8-4778-8849-AB686AA74B38">
+        <di:waypoint x="477" y="193"/>
+        <di:waypoint x="476.5" y="103"/>
       </dmndi:DMNEdge>
-      <dmndi:DMNEdge id="dmnedge-_347BCAA4-E4A7-481F-8CA9-7114CF0936FB-AUTO-TARGET" dmnElementRef="_347BCAA4-E4A7-481F-8CA9-7114CF0936FB">
-        <di:waypoint x="805.1875" y="108.4375"/>
-        <di:waypoint x="381" y="57.41025641025641"/>
+      <dmndi:DMNEdge id="dmnedge-_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_5E7A981F-AE3B-4C64-A8CD-4BDE9EC6C295-AUTO-TARGET" dmnElementRef="_2D34AC4A-61DA-499E-BD48-39A7629F6CB3#_5E7A981F-AE3B-4C64-A8CD-4BDE9EC6C295">
+        <di:waypoint x="729" y="193"/>
+        <di:waypoint x="476.5" y="103"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>

@@ -29,7 +29,9 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 - **Dateipfade**:
 	- [/Quelltext/DMN-Modelle/](./Quelltext/DMN-Modelle/)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn)  
-	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf)
+	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf)  
+	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn)  
+	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf)
 
 ### Anlage 8.4: Demovideos
 Um die Funktionsweise des Prototyps zu demonstrieren, wurden Demovideos mit Kommentaren aufgezeichnet.
