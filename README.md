@@ -42,7 +42,7 @@ Web-Seiten und unveröffentlichte Dokumente, die als Literaturquelle verwendet w
 - **Quelle**: Bundesverband Deutscher Apothekenrechenzentren e. V., 2022
 
 ### Anlage 8.6: Substitutionsausschlussliste
-Das Dokument enthält die von der Ersetzung durch ein wirkstoffgleiches Arzneimittel ausgeschlossenen Arzneimittel gemäß § 129 Absatz 1a Satz 2 SGB V.
+Das Dokument ist der Teil B der Anlage VII zur Arzneimittel-Richtlinie und enthält die von der Ersetzung durch ein wirkstoffgleiches Arzneimittel ausgeschlossenen Arzneimittel gemäß § 129 Absatz 1a Satz 2 SGB V.
 - **Dateipfad**: [/Literaturquellen/Gemeinsamer Bundesausschuss 15072024 - Teil B der Anlage VII zum Abschnitt M.pdf](./Literaturquellen/Gemeinsamer%20Bundesausschuss%2015072024%20-%20Teil%20B%20der%20Anlage%20VII%20zum%20Abschnitt%20M.pdf)
 - **Quelle**: Quelle: Gemeinsamer Bundesausschuss, 2024, S. 51–52
 
