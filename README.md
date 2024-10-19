@@ -33,18 +33,14 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn)  
 	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf)
 
-### Anlage 8.4: Demovideos
-Um die Funktionsweise des Prototyps zu demonstrieren, wurden Demovideos mit Kommentaren aufgezeichnet.
-- **Dateipfad**: [/Demovideos/](./Demovideos/)
-
-### Anlage 8.5: Literaturquellen
+### Anlage 8.4: Literaturquellen
 Web-Seiten und unveröffentlichte Dokumente, die als Literaturquelle verwendet werden, liegen der Arbeit als PDF bei.
 - **Dateipfad**: [/Literaturquellen/](./Literaturquellen/)
 
-### Anlage 8.6: Implementierungsleitfaden der Schnittstellen zwischen Apotheke und Apothekenrechenzentren für das gematik E-Rezept
+### Anlage 8.5: Implementierungsleitfaden der Schnittstellen zwischen Apotheke und Apothekenrechenzentren für das gematik E-Rezept
 - **Dateipfad**: [/Literaturquellen/VDARZ 2022 - Implementierungsleitfaden der Schnittstellen zwischen Apotheke.pdf](./Literaturquellen/VDARZ%202022%20-%20Implementierungsleitfaden%20der%20Schnittstellen%20zwischen%20Apotheke.pdf)
 - **Quelle**: Bundesverband Deutscher Apothekenrechenzentren e. V., 2022
 
-### Anlage 8.7: DAP Arbeitsbuch - III.A.4 Substitutionsausschussliste 
+### Anlage 8.6: DAP Arbeitsbuch - III.A.4 Substitutionsausschussliste 
 - **Dateipfad**: [/Literaturquellen/Brüggen, Dunkel et al 2024 - DAP-Arbeitsbuch - Substitutionsausschussliste.pdf](./Literaturquellen/Brueggen,%20Dunkel%20et%20al%202024%20-%20DAP-Arbeitsbuch%20-%20Substitutionsausschussliste.pdf)
 - **Quelle**: Brüggen et al., 2024, S. III.4.3–III.4.7
