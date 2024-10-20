@@ -30,8 +30,8 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 	- [/Quelltext/DMN-Modelle/](./Quelltext/DMN-Modelle/)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung.dmn)  
 	- [/Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf](./Quelltext/DMN-Modelle/Vorlage_Rezeptpruefung_Dokumentation.pdf)  
-	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste.dmn)  
-	- [/Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Pruefe_Substitutionsausschlussliste_Dokumentation.pdf)
+	- [/Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste.dmn](./Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste.dmn)  
+	- [/Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf)
 
 ### Anlage 8.4: Literaturquellen
 Web-Seiten und unveröffentlichte Dokumente, die als Literaturquelle verwendet werden, liegen der Arbeit als PDF bei.
