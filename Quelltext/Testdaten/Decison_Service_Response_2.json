@@ -1,0 +1,37 @@
+{
+  "Verordnung_ist_Wirkstoffverordnung": {
+    "Status": true,
+    "Hinweis": "Es liegt eine Wirkstoffverordnung vor."
+  },
+  "_comment": "Testdatensatz ist eine reine Wirkstoffverordung. Wirkstoffverordung ist bei Wirkstoffen auf der Substitutionsausschlussliste nicht erlaubt.",
+  "eRezeptId": "160.000.000.000.000.001",
+  "Abgabe_substituiert_Verordnung": {
+    "Status": true,
+    "Hinweis": "Das Arzneimittel wurde substituiert."
+  },
+  "Substitutionsausschlussliste_erfasst_Verordnung": {
+    "Status": true,
+    "Hinweis": "Digoxinin in der Darreichungsform Tabletten ist auf der Substitutionsausschlussliste."
+  },
+  "Verordnung": {
+    "Wirkstoffverordnung": true,
+    "Hersteller": null,
+    "PharmazentralNr": null,
+    "ArztNr": 123456798,
+    "Wirkstoff": "Digoxin",
+    "Darreichungsform": "Tabletten",
+    "Artikelname": null
+  },
+  "Abgabe": {
+    "Preis": 2363,
+    "Hersteller": "Teofarma S.R.I. Fabio Ferrara",
+    "PharmazentralNr": 612269,
+    "Artikelname": "Lanicor® 0,25 mg Digoxin",
+    "ApothekenNr": 301234567,
+    "Zuzahlung": 500
+  },
+  "Verstoss_gegen_Substitutionsausschlussliste": {
+    "Status": true,
+    "Hinweis": "Wirkstoffverordnung ist unzulässig. Wirkstoffe auf der Substitutionsausschlussliste müssen eindeutig und als Fertigarzneimittel verordnet werden."
+  }
+}

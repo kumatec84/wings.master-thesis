@@ -1,0 +1,37 @@
+{
+  "Verordnung_ist_Wirkstoffverordnung": {
+    "Status": false,
+    "Hinweis": "Es liegt keine Wirkstoffverordnung vor."
+  },
+  "_comment": "Testdatensatz ist eine Fertigarzneimittelverordnung mit einem Wirkstoff auf der Substitutionsausschlussliste, die substituiert wurde. Substitution ist bei Wirkstoffen auf der Substitutionsausschlussliste nicht erlaubt.",
+  "eRezeptId": "160.000.000.000.000.002",
+  "Abgabe_substituiert_Verordnung": {
+    "Status": true,
+    "Hinweis": "Das Arzneimittel wurde substituiert."
+  },
+  "Substitutionsausschlussliste_erfasst_Verordnung": {
+    "Status": true,
+    "Hinweis": "Ciclosporinin in der Darreichungsform Weichkapseln ist auf der Substitutionsausschlussliste."
+  },
+  "Verordnung": {
+    "Wirkstoffverordnung": false,
+    "Hersteller": "Teva GmbH",
+    "PharmazentralNr": 6724561,
+    "ArztNr": 123456798,
+    "Wirkstoff": "Ciclosporin",
+    "Artikelname": "CICLOSPORIN Pro 50 mg Weichkapseln",
+    "Darreichungsform": "Weichkapseln"
+  },
+  "Abgabe": {
+    "Preis": 10618,
+    "Hersteller": "1 A Pharma GmbH",
+    "PharmazentralNr": 2725925,
+    "Artikelname": "CICLOSPORIN 25-1A Pharma Weichkapseln",
+    "ApothekenNr": 301234567,
+    "Zuzahlung": 1000
+  },
+  "Verstoss_gegen_Substitutionsausschlussliste": {
+    "Status": true,
+    "Hinweis": "Substitution für Wirkstoffe auf der Substitutionsausschlussliste ist unzulässig."
+  }
+}
