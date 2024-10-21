@@ -17,7 +17,7 @@ Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 - **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](./Kubbillum_Martin__Master-Thesis.pdf)
 
 ### Anlage 9.2: Installationsanleitung und Docker-Container-Definition für IBM Business Automation Manager Open Editions
-Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)) für die lokale Ausführung von IBM Business Automation Manager Open Editions (BAMOE) Version 8 sowie eine zugehörige Installationsanleitung (separate [README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)) werden bereitgestellt.
+Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)) für die lokale Ausführung von IBM Business Automation Manager Open Editions (BAMOE) Version 8 sowie eine zugehörige Installationsanleitung (separate [README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)) werden bereitgestellt. In der Installationsanleitung wird auch kurz der Aufruf von Swagger UI beschrieben.
 - **Dateipfade**:
 	- [/Quelltext/IBM-BAMOE-Docker-Compose/](./Quelltext/IBM-BAMOE-Docker-Compose/)   
 	- [/Quelltext/IBM-BAMOE-Docker-Compose/README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)  
@@ -37,10 +37,10 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 Zum Test des Decision Service wird für jeden der 4 Fälle in der Entscheidungstabelle der Decision *Verstoss_gegen_Substitutionsausschlussliste* (vgl. Kapitel 6.2.4) ein Testdatensatz als JSON-Objekt bereitgestellt. In dem JSON-Attribut *_comment* wird jeweils der Datensatz kurz beschrieben.
 - **Dateipfade**:  
 	- [/Quelltext/Testdaten/](./Quelltext/Testdaten/)  
-	- [/Quelltext/Testdaten/erezept_1.json](./Quelltext/Testdaten/erezept_1.json)  
-	- [/Quelltext/Testdaten/erezept_2.json](./Quelltext/Testdaten/erezept_2.json)  
-	- [/Quelltext/Testdaten/erezept_3.json](./Quelltext/Testdaten/erezept_3.json)  
-	- [/Quelltext/Testdaten/erezept_4.json](./Quelltext/Testdaten/erezept_4.json)
+	- [/Quelltext/Testdaten/eRezept_1.json](./Quelltext/Testdaten/eRezept_1.json)  
+	- [/Quelltext/Testdaten/eRezept_2.json](./Quelltext/Testdaten/eRezept_2.json)  
+	- [/Quelltext/Testdaten/eRezept_3.json](./Quelltext/Testdaten/eRezept_3.json)  
+	- [/Quelltext/Testdaten/eRezept_4.json](./Quelltext/Testdaten/eRezept_4.json)
 	
 ### Anlage 9.5: Literaturquellen
 Web-Seiten und unveröffentlichte Dokumente, die als Literaturquelle verwendet werden, liegen der Arbeit als PDF bei.

@@ -1,0 +1,17 @@
+{
+	"_comment" : "Testdatensatz ist eine reine Wirkstoffverordung. Wirkstoffverordung ist bei Wirkstoffen auf der Substitutionsausschlussliste nicht erlaubt.",	
+	"eRezeptId" : "160.000.000.000.000.001",
+	"Verordnung" : {
+		"Wirkstoffverordnung" :true,
+		"ArztNr" : 123456798,
+		"Wirkstoff" : "Digoxin"
+	},
+	"Abgabe" : {
+		"Preis" : 2363,
+		"Hersteller" : "Teofarma S.R.I. Fabio Ferrara",
+		"PharmazentralNr" : 612269,
+		"Artikelname" : "Lanicor® 0,25 mg Digoxin",
+		"ApothekenNr" : 301234567,
+		"Zuzahlung" : 500
+	}
+}

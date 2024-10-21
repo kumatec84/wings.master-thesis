@@ -1,4 +1,4 @@
-# Installation und Ausführung des Prototyps für die Master-Thesis
+# Installation  Ausführung des Prototyps für die Master-Thesis
 
 ## Voraussetzungen
 Eine lokale Installation von Docker wird vorausgesetzt.
@@ -38,5 +38,14 @@ docker compose up
 Die Web-Oberfläche von Business Central kann jetzt lokal aufgerufen werden.  
 **Zugangslink**: [http://localhost:8080/business-central/kie-wb.jsp](http://localhost:8080/business-central/kie-wb.jsp)  
 Eine Anmeldung ist mit den folgenden Zugangsdaten möglich:  
+**Benutzername**: bamAdmin  
+**Passwort**: ibmpam1!  
+
+### Swagger UI zum Test des Decision Service
+Die Web-Oberfläche von Swagger zum Testen der RESTful Decision Services ist nach dem Start von BAMOE ebenfalls verfügbar.  
+Im Abschnitt *DMN models* befindet sich die Defintion der Endpunkte zum Test der DMN Services.
+- **Aufruf von Swagger UI**  
+**Zugangslink**: [http://localhost:8080/kie-server/docs/](http://localhost:8080/kie-server/docs/)  
+Zum Absetzen der Test-Anfragen ist eine Authentifizierung mit den Zugangsdaten von BAMOE notwendig.  
 **Benutzername**: bamAdmin  
 **Passwort**: ibmpam1!  
