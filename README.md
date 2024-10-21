@@ -34,13 +34,15 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 	- [/Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf)
 
 ### Anlage 10.4: Testdaten
-Zum Test des Decision Service wird für jeden der 4 Fälle in der Entscheidungstabelle der Decision *Verstoss_gegen_Substitutionsausschlussliste* (vgl. Kapitel 6.2.4) ein Testdatensatz als JSON-Objekt bereitgestellt. In dem JSON-Attribut *_comment* wird jeweils der Datensatz kurz beschrieben.
+Zum Testen des Decision Service *Verstoss_gegen_Substitutionsausschlussliste* werden für alle vier Fälle (vgl.  Kapitel 6.2.4) sowohl der Testdatensatz als auch der Antwortdatensatz als JSON-Objekt bereitgestellt. Im JSON-Attribut *_comment* werden die Datensätze beschrieben.
 - **Dateipfade**:  
 	- [/Quelltext/Testdaten/](./Quelltext/Testdaten/)  
+	- **Testdatensätze:**  
 	- [/Quelltext/Testdaten/Testdatensatz1.json](./Quelltext/Testdaten/Testdatensatz1.json)  
 	- [/Quelltext/Testdaten/Testdatensatz2.json](./Quelltext/Testdaten/Testdatensatz2.json)  
 	- [/Quelltext/Testdaten/Testdatensatz3.json](./Quelltext/Testdaten/Testdatensatz3.json)  
 	- [/Quelltext/Testdaten/Testdatensatz4.json](./Quelltext/Testdaten/Testdatensatz4.json)  
+	- **Antwortdatensätze:**  
 	- [/Quelltext/Testdaten/Decison_Service_Response_1.json](./Quelltext/Testdaten/Decison_Service_Response_1.json)  
 	- [/Quelltext/Testdaten/Decison_Service_Response_2.json](./Quelltext/Testdaten/Decison_Service_Response_2.json)  
 	- [/Quelltext/Testdaten/Decison_Service_Response_3.json](./Quelltext/Testdaten/Decison_Service_Response_3.json)  
