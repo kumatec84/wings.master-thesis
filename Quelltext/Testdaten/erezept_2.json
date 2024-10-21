@@ -1,0 +1,21 @@
+{
+	"_comment": "Testdatensatz ist eine Fertigarzneimittelverordnung, die substituiert wurde. Dies ist bei Wirkstoffen auf der Substitutionsausschlussliste nicht erlaubt ist.",	
+	"eRezeptId": "160.000.32.32.321.12",
+    "Verordnung": {
+      "Wirkstoffverordnung": true,
+      "Hersteller": "Teva GmbH",
+      "PharmazentralNr": 6724561,
+      "ArztNr": 123456798,
+      "Wirkstoff": "Ciclosporin",
+      "Artikelname": "CICLOSPORIN Pro 50 mg Weichkapseln",
+      "Darreichungsform": "Weichkapseln"
+    },
+    "Abgabe": {
+      "Preis": "1835900",
+      "Hersteller": "Teva GmbH",
+      "PharmazentralNr": 6724561,
+      "Artikelname": "CICLOSPORIN Pro 50 mg Weichkapseln",
+      "ApothekenNr": 301234567,
+      "Zuzahlung": "1000"
+    }
+}
