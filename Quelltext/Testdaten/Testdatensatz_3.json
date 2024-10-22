@@ -2,7 +2,7 @@
   "_comment": "Testdatensatz ist eine Fertigarzneimittelverordnung mit einem Wirkstoff auf der Substitutionsausschlussliste, die nicht substituiert wurde.",
   "eRezeptId": "160.000.000.000.000.003",
   "Verordnung": {
-    "Wirkstoffverordnung": true,
+    "Wirkstoffverordnung": false,
     "Hersteller": "Teva GmbH",
     "PharmazentralNr": 6724561,
     "ArztNr": 123456798,
