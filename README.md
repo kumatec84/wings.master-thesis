@@ -34,7 +34,7 @@ Die exportierten Entscheidungsmodelle aus Business Central können importiert un
 	- [/Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf](./Quelltext/DMN-Modelle/Verstoss_gegen_Substitutionsausschlussliste_Dokumentation.pdf)
 
 ### Anlage 10.4: Testdaten
-Zum Testen des Decision Service *Verstoss_gegen_Substitutionsausschlussliste* werden für alle vier Fälle (vgl.  Kapitel 6.2.4) sowohl der Testdatensatz_ als auch der Antwortdatensatz als JSON-Objekt bereitgestellt. Im JSON-Attribut *_comment* werden die Datensätze kurz beschrieben.
+Zum Testen des Decision Service *Verstoss_gegen_Substitutionsausschlussliste* werden für alle vier Fälle (vgl.  Kapitel 6.2.4) sowohl der Testdatensatz als auch der Antwortdatensatz als JSON-Objekt bereitgestellt. Im JSON-Attribut *_comment* werden die Datensätze kurz beschrieben.
 - **Dateipfade**:  
 	- [/Quelltext/Testdaten/](./Quelltext/Testdaten/)  
 	- **Testdatensätze:**  
