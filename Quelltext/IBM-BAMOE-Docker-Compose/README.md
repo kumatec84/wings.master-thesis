@@ -1,5 +1,11 @@
 # Installation und Ausführung des Prototyps für die Master-Thesis
 
+## Thema
+**Regelbasierte Prüfung von E-Rezepten zur Vermeidung von Retaxation bei Leistungserbringern der gesetzlichen Krankenversicherung**
+
+## Autor
+**Martin Kubbillum**
+
 ## Voraussetzungen
 Eine lokale Installation von Docker wird vorausgesetzt.
 
