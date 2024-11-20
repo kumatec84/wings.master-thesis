@@ -1,0 +1,21 @@
+{
+  "_comment": "Testdatensatz ist eine Fertigarzneimittelverordnung mit einem Wirkstoff auf der Substitutionsausschlussliste, die substituiert wurde. Substitution ist bei Wirkstoffen auf der Substitutionsausschlussliste nicht erlaubt.",
+  "eRezeptId": "160.000.000.000.000.005",
+  "Verordnung": {
+    "Wirkstoffverordnung": false,
+    "Hersteller": "Teva GmbH",
+    "PharmazentralNr": 4346267,
+    "ArztNr": 123456798,
+    "Wirkstoff": "Digitoxin",
+    "Artikelname": "Digitoxin AWD 0,07 mg",
+    "Darreichungsform": "Tabletten"
+  },
+  "Abgabe": {
+    "Preis": 2723,
+    "Hersteller": "Merck Healthcare Germany GmbH",
+    "PharmazentralNr": 4903839,
+    "Artikelname": "Digimerck 0,1 mg",
+    "ApothekenNr": 301234567,
+    "Zuzahlung": 500
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "Verordnung_ist_Wirkstoffverordnung": {
+    "Status": false,
+    "Hinweis": "Es liegt keine Wirkstoffverordnung vor."
+  },
+  "_comment": "Testdatensatz ist eine Verordnung mit einem Wirkstoff, der substituiert wurde, aber nicht auf der Substitutionsausschlussliste ist.",
+  "eRezeptId": "160.000.000.000.000.004",
+  "Abgabe_substituiert_Verordnung": {
+    "Status": true,
+    "Hinweis": "Das Arzneimittel wurde substituiert."
+  },
+  "Substitutionsausschlussliste_erfasst_Verordnung": {
+    "Status": false,
+    "Hinweis": "Wirkstoff ist nicht auf der Substitutionsausschlussliste."
+  },
+  "Verordnung": {
+    "Wirkstoffverordnung": false,
+    "Hersteller": "Viatris Healthcare GmbH",
+    "PharmazentralNr": 2952845,
+    "ArztNr": 123456798,
+    "Wirkstoff": "Metoprolol",
+    "Artikelname": "Metoprololsuccinat dura® 47,5 mg",
+    "Darreichungsform": "Retard-Tabletten"
+  },
+  "Abgabe": {
+    "Preis": 2723,
+    "Hersteller": "Recordati Pharma GmbH",
+    "PharmazentralNr": 3879435,
+    "Artikelname": "BELOC-ZOK mite 47,5 mg Retardtabletten",
+    "ApothekenNr": 301234567,
+    "Zuzahlung": 500
+  },
+  "Verstoss_gegen_Substitutionsausschlussliste": {
+    "Status": false,
+    "Hinweis": "Wirkstoff ist nicht auf der Substitutionsaussschlussliste."
+  }
+}

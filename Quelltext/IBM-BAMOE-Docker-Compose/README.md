@@ -55,3 +55,5 @@ Dort befinden sich im Abschnitt *DMN models*  die Defintion der Endpunkte zum Te
 Zum Absetzen der Test-Anfragen ist eine Authentifizierung mit den Zugangsdaten von BAMOE notwendig.  
 **Benutzername**: bamAdmin  
 **Passwort**: ibmpam1!  
+containerID: Substitutionsausschlussliste_1.0.0-SNAPSHOT  
+modelID: Verstoss_gegen_Substitutionsausschlussliste
