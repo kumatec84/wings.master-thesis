@@ -18,8 +18,8 @@ Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 
 ### Anlage 10.2: Verteidigung der Master-Thesis (Präsentation und Probe)
 - **Dateipfade**:
-	- [/Kubbillum_Martin__Master-Thesis__Verteidigung.pdf](./Kubbillum_Martin__Master-Thesis__Verteidigung.pdf123)   
-	- [/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4](https://github.com/kumatec84/wings.master-thesis/blob/main/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4) 
+	- [/Kubbillum_Martin__Master-Thesis__Verteidigung.pdf](./Kubbillum_Martin__Master-Thesis__Verteidigung.pdf)   
+	- [/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4](https://github.com/kumatec84/wings.master-thesis/raw/refs/heads/main/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4) 
 
 ### Anlage 10.3: Installationsanleitung und Docker-Container-Definition für IBM Business Automation Manager Open Editions
 Eine Multi-Container-Definition ([docker-compose.yaml](./Quelltext/IBM-BAMOE-Docker-Compose/docker-compose.yaml)) für die lokale Ausführung von IBM Business Automation Manager Open Editions (BAMOE) Version 8 sowie eine zugehörige Installationsanleitung (separate [README.md](./Quelltext/IBM-BAMOE-Docker-Compose/README.md)) werden bereitgestellt. In der Installationsanleitung wird auch kurz der Aufruf von Swagger UI beschrieben.
