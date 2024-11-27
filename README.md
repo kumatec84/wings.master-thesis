@@ -14,11 +14,11 @@
 Die folgenden Artefakte sind auf dem beiliegenden USB-Stick abgelegt.
 
 ### Anlage 10.1: Digitale Ausfertigung der Master-Thesis
-- **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](./Kubbillum_Martin__Master-Thesis.pdf)
+- **Dateipfad**: [/Kubbillum_Martin__Master-Thesis.pdf](https://raw.githubusercontent.com/kumatec84/wings.master-thesis/refs/heads/main/Kubbillum_Martin__Master-Thesis.pdf)
 
 ### Anlage 10.2: Verteidigung der Master-Thesis (Präsentation und Probe)
 - **Dateipfade**:
-	- [/Kubbillum_Martin__Master-Thesis__Verteidigung.pdf](./Kubbillum_Martin__Master-Thesis__Verteidigung.pdf)   
+	- [/Kubbillum_Martin__Master-Thesis__Verteidigung.pdf](https://raw.githubusercontent.com/kumatec84/wings.master-thesis/refs/heads/main/Kubbillum_Martin__Master-Thesis__Verteidigung.pdf)   
 	- [/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4](https://github.com/kumatec84/wings.master-thesis/raw/refs/heads/main/Kubbillum_Martin__Master-Thesis__Verteidigung__Probe.mp4) 
 
 ### Anlage 10.3: Installationsanleitung und Docker-Container-Definition für IBM Business Automation Manager Open Editions
